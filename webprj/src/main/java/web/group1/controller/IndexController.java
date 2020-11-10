@@ -13,7 +13,7 @@ import web.group1.controller.service.NoticeService;
 
 
 public class IndexController implements Controller {
-	
+	//run the program here
 	private NoticeService noticeService;
 	public void setNoticeService(NoticeService noticeService) {
 		this.noticeService = noticeService;
