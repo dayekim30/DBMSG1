@@ -8,14 +8,35 @@
         https://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
     <bean id="/index" class="web.group1.controller.IndexController">
-    	<property name="noticeService" ref="noticeService" />
+  
+    
     </bean>
+    
       <!--id:url class: package.class -->
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-    	<property name="prefix" value="/WEB-INF/view/"></property>
-    	<property name="suffix" value=".jsp"></property>
-    	
-    </bean>
-    <mvc:resources location="/resource/" mapping="/**"></mvc:resources>
-	<bean id="noticeService" class="web.group1.controller.service.NoticeService" />
+ 
+    <mvc:resources location="/resource/" mapping="/resouce/**"></mvc:resources>
+    
+	
+	
+	<bean class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+	<property name="viewClass" value="org.springframework.web.servlet.view.tiles3.TilesView" />
+	<property name="order" value="1" />
+	</bean>
+
+	<bean class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+		<property name="definitions" value="/WEB-INF/tiles.xml" />
+	</bean>
+
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	    <property name="prefix" value="/WEB-INF/view/"></property>
+	    <property name="suffix" value=".jsp"></property>
+	    <property name="order" value="2" />
+	</bean>
+		 
+	
+	
+	
+	
+	
+	
 </beans>

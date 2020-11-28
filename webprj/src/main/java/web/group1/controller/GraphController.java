@@ -1,5 +1,4 @@
 package web.group1.controller;
-
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -13,7 +12,7 @@ import web.group1.controller.entity.WeaponTrend;
 import web.group1.controller.service.NoticeService;
 
 
-public class IndexController implements Controller {
+public class GraphController implements Controller {
 	//run the program here
 	private NoticeService noticeService;
 	public void setNoticeService(NoticeService noticeService) {
@@ -26,7 +25,7 @@ public class IndexController implements Controller {
 		
 		
 		List<WeaponTrend> list = noticeService.getList();
-	
+		 
 		
 		mv.addObject("list", list.toArray());
 		//mv.setViewName("/WEB-INF/view/index.jsp");
@@ -37,3 +36,4 @@ public class IndexController implements Controller {
 
 }
     
+

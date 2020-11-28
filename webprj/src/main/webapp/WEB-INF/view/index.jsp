@@ -2,20 +2,21 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
+<div id="main" >
 	<h1>Hello</h1>
-	<table>
+	<table>  
   <c:forEach items="${list}" var="item">
     <tr>
-      <td><c:out value="${item.getCountry_name()}" /> 
-        <c:out value="${item.getCountry_code()}" /></td>
+      <td> <c:out value="${item.getWep_type()}" />
+       
+       <c:out value="${item.getEvent_year()}" />
+        <c:out value="${item.getNum()}" />
+       
+       
+       
+       </td>
     </tr>
   </c:forEach>
 </table>
-</body>
-</html>
+
+</div>

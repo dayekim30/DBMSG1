@@ -10,17 +10,15 @@ public class Notice {
 	public Notice() {//초기화?
 	}
 //생성자 오보로드
-	
-	public String getCountry_code() {
-		return country_code;
-	}
-
 	public Notice(String country_code, String country_name, String region_code, String region_name) {
 		super();
 		this.country_code = country_code;
 		this.country_name = country_name;
 		this.region_code = region_code;
 		this.region_name = region_name;
+	}
+	public String getCountry_code() {
+		return country_code;
 	}
 
 	public void setCountry_code(String country_code) {
